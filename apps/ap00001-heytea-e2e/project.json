@@ -1,0 +1,28 @@
+{
+  "root": "apps/ap00001-heytea-e2e",
+  "sourceRoot": "apps/ap00001-heytea-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ap00001-heytea-e2e/cypress.json",
+        "devServerTarget": "ap00001-heytea:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ap00001-heytea:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ap00001-heytea-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ap00001-heytea"]
+}

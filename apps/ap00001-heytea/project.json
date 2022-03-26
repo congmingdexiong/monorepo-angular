@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/ap00001-heytea",
+  "sourceRoot": "apps/ap00001-heytea/src",
+  "prefix": "monorepo-angular",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ap00001-heytea",
+        "index": "apps/ap00001-heytea/src/index.html",
+        "main": "apps/ap00001-heytea/src/main.ts",
+        "polyfills": "apps/ap00001-heytea/src/polyfills.ts",
+        "tsConfig": "apps/ap00001-heytea/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/ap00001-heytea/src/favicon.ico",
+          "apps/ap00001-heytea/src/assets"
+        ],
+        "styles": ["apps/ap00001-heytea/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/ap00001-heytea/src/environments/environment.ts",
+              "with": "apps/ap00001-heytea/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ap00001-heytea:build:production"
+        },
+        "development": {
+          "browserTarget": "ap00001-heytea:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ap00001-heytea:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/ap00001-heytea/src/**/*.ts",
+          "apps/ap00001-heytea/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ap00001-heytea"],
+      "options": {
+        "jestConfig": "apps/ap00001-heytea/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

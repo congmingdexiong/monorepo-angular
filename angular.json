@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "ap00001-heytea": "apps/ap00001-heytea",
+    "ap00001-heytea-e2e": "apps/ap00001-heytea-e2e"
+  }
+}
