@@ -1,0 +1,28 @@
+{
+  "root": "apps/ap00002-starbucks-e2e",
+  "sourceRoot": "apps/ap00002-starbucks-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ap00002-starbucks-e2e/cypress.json",
+        "devServerTarget": "ap00002-starbucks:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ap00002-starbucks:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ap00002-starbucks-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ap00002-starbucks"]
+}

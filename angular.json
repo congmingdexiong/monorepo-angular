@@ -2,6 +2,9 @@
   "version": 2,
   "projects": {
     "ap00001-heytea": "apps/ap00001-heytea",
-    "ap00001-heytea-e2e": "apps/ap00001-heytea-e2e"
+    "ap00001-heytea-e2e": "apps/ap00001-heytea-e2e",
+    "ap00002-starbucks": "apps/ap00002-starbucks",
+    "ap00002-starbucks-e2e": "apps/ap00002-starbucks-e2e",
+    "data": "libs/data"
   }
 }
