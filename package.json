@@ -22,7 +22,8 @@
     "@nrwl/angular": "13.9.5",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.0",
@@ -32,6 +33,9 @@
     "@angular/cli": "~13.2.0",
     "@angular/compiler-cli": "~13.2.0",
     "@angular/language-service": "~13.2.0",
+    "@ngrx/effects": "^13.0.2",
+    "@ngrx/store": "^13.0.2",
+    "@ngrx/store-devtools": "^13.0.2",
     "@nrwl/cli": "13.9.5",
     "@nrwl/cypress": "13.9.5",
     "@nrwl/eslint-plugin-nx": "13.9.5",
@@ -40,6 +44,7 @@
     "@nrwl/linter": "13.9.5",
     "@nrwl/workspace": "13.9.5",
     "@types/jest": "27.0.2",
+    "@types/lodash": "^4.14.180",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",

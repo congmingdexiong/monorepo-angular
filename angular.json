@@ -1,4 +1,7 @@
 {
+  "cli": {
+    "analytics": false
+  },
   "version": 2,
   "projects": {
     "ap00001-heytea": "apps/ap00001-heytea",
