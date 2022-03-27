@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -9,11 +9,12 @@ import { AccountEffect } from './store/effects/accounts.effect';
 import { wotbReducers } from './store/reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import { AccountService } from './service/account.service';
-
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,    
+    AgGridModule.withComponents([]),
     StoreModule.forRoot(wotbReducers),
     EffectsModule.forRoot([AccountEffect]),
     environment.production?[]:StoreDevtoolsModule.instrument({
@@ -24,5 +25,6 @@ import { AccountService } from './service/account.service';
   ],
   providers: [AccountService],
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

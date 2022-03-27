@@ -7,7 +7,8 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "cypress":"./node_modules/.bin/cypress open"
   },
   "private": true,
   "dependencies": {
@@ -20,10 +21,12 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "@nrwl/angular": "13.9.5",
+    "ag-grid-angular": "^27.1.1",
+    "ag-grid-community": "^27.1.0",
+    "lodash": "^4.17.21",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4",
-    "lodash": "^4.17.21"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.0",
