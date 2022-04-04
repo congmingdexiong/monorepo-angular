@@ -15,7 +15,29 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@monorepo-angular/data": ["libs/data/src/index.ts"]
+      "@monorepo-angular/data": ["libs/data/src/index.ts"],
+      "@monorepo-angular/heya-analysis-and-research": [
+        "libs/heya-analysis-and-research/src/index.ts"
+      ],
+      "@monorepo-angular/heya-chain-dashboard": [
+        "libs/heya-chain-dashboard/src/index.ts"
+      ],
+      "@monorepo-angular/heya-idea-generation-dashboard": [
+        "libs/heya-idea-generation-dashboard/src/index.ts"
+      ],
+      "@monorepo-angular/libs/shared/util/commons/commons": [
+        "libs/libs/shared/util/commons/commons/src/index.ts"
+      ],
+      "@monorepo-angular/market": ["libs/market/src/index.ts"],
+      "@monorepo-angular/oar-idea-generation-dashboard": [
+        "libs/oar-idea-generation-dashboard/src/index.ts"
+      ],
+      "@monorepo-angular/shared/util/commons": [
+        "libs/shared/util/commons/src/index.ts"
+      ],
+      "@monorepo-angular/shared/util/commons/commons": [
+        "libs/shared/util/commons/commons/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

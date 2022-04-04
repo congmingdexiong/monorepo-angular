@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/heya-chain-dashboard",
+  "sourceRoot": "libs/heya-chain-dashboard/src",
+  "prefix": "monorepo-angular",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/heya-chain-dashboard"],
+      "options": {
+        "jestConfig": "libs/heya-chain-dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/heya-chain-dashboard/src/**/*.ts",
+          "libs/heya-chain-dashboard/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

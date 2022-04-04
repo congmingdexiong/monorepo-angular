@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/market",
+  "sourceRoot": "libs/market/src",
+  "prefix": "monorepo-angular",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/market"],
+      "options": {
+        "jestConfig": "libs/market/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/market/src/**/*.ts",
+          "libs/market/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/heya-analysis-and-research",
+  "sourceRoot": "libs/heya-analysis-and-research/src",
+  "prefix": "monorepo-angular",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/heya-analysis-and-research"],
+      "options": {
+        "jestConfig": "libs/heya-analysis-and-research/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/heya-analysis-and-research/src/**/*.ts",
+          "libs/heya-analysis-and-research/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'ap00001-heytea',
+  displayName: 'heya-chain-dashboard',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/ap00001-heytea',
+  coverageDirectory: '../../coverage/libs/heya-chain-dashboard',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
@@ -18,13 +18,4 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
-  // // verbose:true,
-  // // coverageThreshold:{
-  // //   global:{
-  // //     branches:90,
-  // //     functions:90,
-  // //     lines:90,
-  // //     statements:90
-  // //   }
-  // }
 };

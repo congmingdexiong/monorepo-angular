@@ -1,13 +1,15 @@
 {
-  "cli": {
-    "analytics": false
-  },
   "version": 2,
   "projects": {
     "ap00001-heytea": "apps/ap00001-heytea",
     "ap00001-heytea-e2e": "apps/ap00001-heytea-e2e",
     "ap00002-starbucks": "apps/ap00002-starbucks",
     "ap00002-starbucks-e2e": "apps/ap00002-starbucks-e2e",
-    "data": "libs/data"
+    "data": "libs/data",
+    "heya-analysis-and-research": "libs/heya-analysis-and-research",
+    "heya-chain-dashboard": "libs/heya-chain-dashboard",
+    "heya-idea-generation-dashboard": "libs/heya-idea-generation-dashboard",
+    "market": "libs/market",
+    "shared-util-commons": "libs/shared/util/commons"
   }
 }

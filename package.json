@@ -7,8 +7,17 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "cypress":"./node_modules/.bin/cypress open"
+    "cypress": "./node_modules/.bin/cypress open",
+    "affected":"nx affected",
+    "affected:apps":"nx affected:apps",
+    "affected:build":"nx affected:build",
+    "affected:dep-graph":"nx affected:dep-graph",
+    "affected:libs":"nx affected:libs",
+    "affected:lint":"nx affected:lint",
+    "affected:test":"nx affected:test",
+    "testall":"nx run-many --target=test --all -skip-nx-cache=true --codeCoverage",
+    "update":"nx migrate latest",
+    "workspace-generator":"nx workspace-generator"
   },
   "private": true,
   "dependencies": {
